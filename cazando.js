@@ -10,8 +10,11 @@ const ALTO_COMIDA=30
 let comidaX=0
 let comidaY=0
 let puntaje=0
+let tiempo=10
+let velocidadTiempo=1000
 
 function iniciarJuego(){
+    setInterval(restarTiempo,velocidadTiempo)
     graficarGato()
     graficarComida()
 }
@@ -74,4 +77,9 @@ function detectarColision(){
         puntaje=puntaje+1
         mostrarEnSpam("puntos",puntaje)
     }
+}
+
+function restarTiempo(){
+    tiempo=tiempo-1
+    mostrarEnSpam("tiempo",tiempo)
 }
