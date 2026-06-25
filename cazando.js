@@ -9,7 +9,7 @@ const ANCHO_COMIDA=30
 const ALTO_COMIDA=30
 let comidaX=0
 let comidaY=0
-
+let puntaje=0
 
 function iniciarJuego(){
     graficarGato()
@@ -69,6 +69,9 @@ function detectarColision(){
     if (comidaX+ANCHO_COMIDA>gatoX && comidaY+ALTO_COMIDA>gatoY  
         && comidaX<gatoX+ANCHO_GATO && comidaY<gatoY+ALTO_GATO)
         {
-        alert ("Colision")
+        comidaX=generarAleatorio(0,canvas.width-ANCHO_COMIDA)
+        comidaY=generarAleatorio(0,canvas.height-ALTO_COMIDA)
+        puntaje=puntaje+1
+        mostrarEnSpam("puntos",puntaje)
     }
 }
