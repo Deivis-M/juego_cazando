@@ -1,12 +1,12 @@
 let canvas=document.getElementById("areaJuego")
 let ctx =canvas.getContext("2d")
-const ANCHO_GATO=100
-const ALTO_GATO=50
+const ANCHO_GATO=150
+const ALTO_GATO=90
 let gatoX=(canvas.width/2)-(ANCHO_GATO/2)
 let gatoY=(canvas.height/2)-(ALTO_GATO/2)
 
-const ANCHO_COMIDA=30
-const ALTO_COMIDA=30
+const ANCHO_COMIDA=40
+const ALTO_COMIDA=40
 let comidaX=0
 let comidaY=0
 let puntaje=0
@@ -39,7 +39,7 @@ function limpiarCanva(){
 }
 
 function moverIzquierda(){
-    gatoX=gatoX-10
+    gatoX=gatoX-12
     limpiarCanva()
     graficarGato()
     graficarComida()
@@ -47,7 +47,7 @@ function moverIzquierda(){
 }
 
 function moverDerecha(){
-    gatoX=gatoX+10
+    gatoX=gatoX+12
     limpiarCanva()
     graficarGato()
     graficarComida()   
@@ -55,7 +55,7 @@ function moverDerecha(){
 }
 
 function moverArriba(){
-    gatoY=gatoY-10
+    gatoY=gatoY-12
     limpiarCanva()
     graficarGato()
     graficarComida()  
@@ -63,7 +63,7 @@ function moverArriba(){
 }
 
 function moverAbajo(){
-    gatoY=gatoY+10
+    gatoY=gatoY+12
     limpiarCanva()
     graficarGato()
     graficarComida()
@@ -79,7 +79,7 @@ function detectarColision(){
         puntaje=puntaje+1
         mostrarEnSpam("puntos",puntaje)
         if (puntaje==6){
-        alert ("GANASTER!!")
+        alert ("🐾 ¡Lo lograste! Has completado la cacería con éxito y tu gato está más feliz que nunca")
          clearInterval(intervalo)
     }
     }
@@ -89,7 +89,7 @@ function restarTiempo(){
     tiempo=tiempo-1
     mostrarEnSpam("tiempo",tiempo)
     if (tiempo==0){
-        alert ("GAME OVER")
+        alert ("🐾 ¡La comida escapó! ¡Vuelve a cazar!")
         clearInterval(intervalo)
     }
 
