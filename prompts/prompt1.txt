@@ -1,0 +1,9 @@
+Estos son los prompts que usé para mejorar la parte de la interfaz:
+N° 1:Actúa como un diseñador gráfico especializado en videojuegos. Quiero que mejores la interfaz gráfica de mi juego 
+"Cazando" utilizando únicamente HTML y CSS, sin modificar el archivo JavaScript. El objetivo es que el juego tenga una apariencia moderna, organizada y profesional.
+N° 2:Quiero que el juego tenga un marco que encierre todo el contenido, con un diseño atractivo y colores acordes a la temática del juego.
+N° 3:Coloca el título centrado en la parte superior con un emoji de gato a un lado y mejora el tamaño del título, el subtítulo y el nombre del autor.
+N° 4:Diseña un panel lateral derecho donde se muestren los puntos y el tiempo utilizando emojis en lugar de imágenes
+     El emoji debe estar a la izquierda y el texto con el valor a la derecha.
+N° 5:Haz que los botones de dirección sean más grandes y con un estilo similar al de un videojuego casual.
+N° 6:Mejora la distribución de los elementos para que el espacio se aproveche mejor y la interfaz no se vea vacía.

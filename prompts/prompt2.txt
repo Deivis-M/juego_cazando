@@ -1,0 +1,6 @@
+En estos prompts mejoré el fondo de la interfaz y algunos mensajes que me faltaban.
+N° 1:Quiero mejorar el fondo de mi juego para que tenga relación con la temática. Dame ideas para un fondo con césped, plantas y huellas de gato.
+N° 2:Genera una imagen de referencia para un fondo de un juego de un gato cazando comida, con césped, plantas, flores y huellas de gato, sin mostrar la interfaz del juego.
+N° 3:Explícame cómo colocar una imagen de fondo en CSS para que ocupe toda la pantalla sin deformarse.
+N° 4:Dame un mensaje corto y motivador para cuando el jugador pierda la partida.
+N° 5:Dame un mensaje corto para cuando el jugador gane la partida.
