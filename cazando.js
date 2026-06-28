@@ -10,7 +10,7 @@ const ALTO_COMIDA=30
 let comidaX=0
 let comidaY=0
 let puntaje=0
-let tiempo=10
+let tiempo=30
 let velocidadTiempo=1000
 let intervalo
 
@@ -96,7 +96,7 @@ function restarTiempo(){
 }
 
 function reiniciar(){
-    tiempo=10
+    tiempo=30
     mostrarEnSpam("tiempo",tiempo)
     puntaje=0
     mostrarEnSpam("puntos",puntaje)

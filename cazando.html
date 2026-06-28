@@ -1,32 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juego Cazando</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="cazando.css"/>
   <script src="utils.js"></script>
 </head>
 <body onload="iniciarJuego()">
 
-  <h1>Juego Cazando</h1>
-  <p>Autor:Deivis-M</p>
-  <canvas id="areaJuego" width="500" height="500" ></canvas>
+  <div class="contenedor">
 
+    <header class="cabecera">
+      <div class="mascota" aria-hidden="true">🐱</div>
 
-  <div class="controles">
-    <button onclick="moverArriba()">⬆</button>
-    <br>
-    <button onclick="moverIzquierda()">⬅</button>
-    <button onclick="moverAbajo()">⬇</button>
-    <button onclick="moverDerecha()">➡</button>
+      <div class="titulo-bloque">
+        <h1>Cazando</h1>
+        <p class="lema">¡Atrapa la comida!</p>
+      </div>
+
+      <div class="comedero" aria-hidden="true">🥣</div>
+    </header>
+
+    <p class="autor">Autor: Deivis</p>
+
+    <div class="zona-juego">
+
+      <div class="campo">
+        <canvas id="areaJuego" width="500" height="500"></canvas>
+      </div>
+
+      <aside class="lateral">
+
+        <div class="tarjeta">
+          <span class="icono">🏆</span>
+          <div class="info">
+            <span class="etiqueta">Puntos</span>
+            <span id="puntos" class="valor valor-verde">0</span>
+          </div>
+        </div>
+
+        <div class="tarjeta">
+          <span class="icono">⏱️</span>
+          <div class="info">
+            <span class="etiqueta">Tiempo</span>
+            <span id="tiempo" class="valor valor-azul">10</span>
+          </div>
+        </div>
+
+        <div class="tarjeta tarjeta-info">
+          <p class="titulo-info"><span aria-hidden="true">🐾</span> ¡A cazar!</p>
+          <p class="texto-info">Atrapa la comida antes de que se acabe el tiempo.</p>
+        </div>
+
+        <button class="reiniciar" onclick="reiniciar()">
+          <span class="icono-reiniciar" aria-hidden="true">↻</span> Reiniciar
+        </button>
+
+      </aside>
+
+    </div>
+
+    <div class="zona-controles">
+      <div class="controles" role="group" aria-label="Controles de movimiento">
+        <button class="flecha flecha-arriba" onclick="moverArriba()" aria-label="Mover arriba">⬆</button>
+        <button class="flecha flecha-izquierda" onclick="moverIzquierda()" aria-label="Mover izquierda">⬅</button>
+        <button class="flecha flecha-abajo" onclick="moverAbajo()" aria-label="Mover abajo">⬇</button>
+        <button class="flecha flecha-derecha" onclick="moverDerecha()" aria-label="Mover derecha">➡</button>
+      </div>
+    </div>
+
+    <p id="mensaje"></p>
+
   </div>
-
-
-  <div class="panel">
-    <span>Puntos: <span id="puntos">0</span></span>
-    <span>Tiempo: <span id="tiempo">10</span></span>
-  </div>
-  <button onclick="reiniciar()">Reiniciar</button> 
-  <p id="mensaje"></p>
 
 <script src="cazando.js"></script>
 </body>
